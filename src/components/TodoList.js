@@ -4,7 +4,7 @@ export default class TodoList extends Component {
   render() {
     return (
       <div>
-       jsndkvd
+       Todo List demo
       </div>
     );
   }
