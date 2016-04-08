@@ -1,4 +1,4 @@
-const Todo = (state, action) => {
+const todo = (state, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return {
@@ -26,11 +26,11 @@ const Todo = (state, action) => {
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, Todo(undefined, action)]
+      return [...state, todo(undefined, action)]
       break;
     case 'TOGGLE_TODO':
       return state.map(t => {
-        Todo(t, action)
+        return todo(t, action)
       })
     default:
       return state;

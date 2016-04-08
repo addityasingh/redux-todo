@@ -1,42 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Todo from './Todo';
 
-export default class TodoList extends Component {
-  componentDidMount () {
-    const { store } = this.context;
-    this.unsubscribe = store.subscribe(() => {
-      this.forceUpdate();
-    });
-  }
-
-  componentWillUnmount () {
-    this.unsubscribe();
-  }
-
-  render() {
-    //TODO:Remove hardcoded todo list once add todo implemented
-    const initialTodos = [
-        { text: 'Aditya' },
-        { text: 'Pratap' },
-        { text: 'Singh' }
-      ];
-
-    const { store } = this.context;
-    const { todos, visibilityFilter } = store.getState();
-
-    return (
-      <ul>
-        {
-          todos.map((t) => {
-           return  <Todo { ...t }/>
-          })
-        }
-      </ul>
-    );
-  }
+const TodoList = ({ todos, onClick }) => {
+  return (
+    <ul>
+      {
+        todos.map((t) => {
+         return  (
+           <Todo
+             key = { t.id }
+             { ...t }
+             onClick= {() => onClick(t.id) }>
+           </Todo>
+          );
+        })
+      }
+    </ul>
+  );
 }
 
-TodoList.contextTypes = {
-  store: React.PropTypes.object
-}
+export default TodoList;
