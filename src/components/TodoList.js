@@ -28,7 +28,7 @@ export default class TodoList extends Component {
     return (
       <ul>
         {
-          initialTodos.map((t) => {
+          todos.map((t) => {
            return  <Todo { ...t }/>
           })
         }
