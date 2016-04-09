@@ -19,6 +19,10 @@ let AddTodo = ({ dispatch }) => {
       <div style={ styles.container }>
         <form onSubmit={ (e) =>  {
           e.preventDefault();
+          if (!nodeRef.getValue().trim()) {
+            return;
+          }
+
           dispatch(addTodo(nodeRef.getValue()));
           nodeRef.clearValue();
           }}>
