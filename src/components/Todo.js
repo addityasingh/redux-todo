@@ -1,5 +1,5 @@
 import Checkbox from 'material-ui/lib/checkbox';
-import React, { Component } from 'react';
+import React from 'react';
 
 const styles = {
   checkbox: {
