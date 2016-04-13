@@ -1,4 +1,4 @@
-import { combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 import todos from './TodoList';
 import visibilityFilter from './VisibilityFilter';

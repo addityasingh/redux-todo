@@ -21,3 +21,11 @@ export const toggleTodo = (id) => {
     id
   }
 }
+
+
+export const addCard = (id) => {
+  return {
+    type: 'ADD_CARD',
+    id
+  }
+}

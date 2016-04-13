@@ -40,8 +40,10 @@ const todos = (state = [], action) => {
 const cards = (state = [], action) => {
   switch (action.type) {
     case 'ADD_CARD':
-      return [...state, { todos: todos(undefined)} ]
-      return ;
+      return [
+        ...state,
+        { id: action.id, todos: todos(undefined) }
+      ];
     default:
       return state;
   }

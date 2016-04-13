@@ -1,7 +1,7 @@
 import ContentAdd from 'material-ui/lib/svg-icons/content/add';
 import IconButton from 'material-ui/lib/icon-button';
+import React from 'react';
 import TextField from 'material-ui/lib/text-field';
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { addTodo } from '../actions';

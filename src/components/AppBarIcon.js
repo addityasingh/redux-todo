@@ -1,5 +1,5 @@
 import AppBar from 'material-ui/lib/app-bar';
-import React, { PropTypes } from 'react'
+import React from 'react'
 
 const AppBarIcon = (props) => {
   return (
