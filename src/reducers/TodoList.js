@@ -42,11 +42,22 @@ const cards = (state = [], action) => {
     case 'ADD_CARD':
       return [
         ...state,
-        { id: action.id, todos: todos(undefined) }
+        { cardid: action.cardid, todos: todos(undefined, action) }
       ];
+    case 'ADD_TODO':
+      return state.map((item) => {
+        if (item.cardid === action.cardid) {
+          return {
+            ...item,
+            todos: todos(undefined, action)
+          };
+        }
+
+        return item;
+      })
     default:
       return state;
   }
 }
 
-export default todos;
+export default cards;
