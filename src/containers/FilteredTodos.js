@@ -23,7 +23,8 @@ const getCurrentCard = (cards, currentCard) => {
 const mapStateToProps = ( state ) => {
   return {
     todos: getCurrentCard(state.cards, state.currentCard)
-      .map((todos) => getFilteredTodos(todos))  
+      .map((c) => getFilteredTodos(c.todos))
+      .reduce((a, b) => { return [a, ...b]}, []) 
   };
 }
 

@@ -29,3 +29,10 @@ export const addCard = () => {
     cardid: nextCard++
   }
 }
+
+export const setCurrentCard = () => {
+  return {
+    type: 'SET_CURRENT_CARD',
+    cardid: nextCard
+  }
+}
