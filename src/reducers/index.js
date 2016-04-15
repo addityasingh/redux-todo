@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import cards from './TodoList';
-import currentCard from './CurrentCard';
+import todos from './TodoList';
+import visibilityFilter from './VisibilityFilter';
 
 const todoReducer = combineReducers({
-  cards,
-  currentCard
+  todos,
+  visibilityFilter
 });
 
 export default todoReducer

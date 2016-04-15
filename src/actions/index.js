@@ -22,10 +22,10 @@ export const toggleTodo = (id) => {
   }
 }
 
-let nextCard = 0;
-export const addCard = () => {
+
+export const addCard = (id) => {
   return {
     type: 'ADD_CARD',
-    cardid: nextCard++
+    id
   }
 }

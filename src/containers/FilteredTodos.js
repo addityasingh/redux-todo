@@ -16,14 +16,9 @@ const getFilteredTodos = (todos, filter) => {
   }
 }
 
-const getCurrentCard = (cards, currentCard) => {
-  return cards.filter((c) => c.cardid === currentCard);
-}
-
 const mapStateToProps = ( state ) => {
   return {
-    todos: getCurrentCard(state.cards, state.currentCard)
-      .map((todos) => getFilteredTodos(todos))  
+    todos: getFilteredTodos(state.todos, state.visibilityFilter)
   };
 }
 

@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 
-import AddCard from './AddCard';
+import AddTodo from './AddTodo';
 import AppBarIcon from './AppBarIcon';
-import FilteredCards from '../containers/FilteredCards';
+import Card from '../components/Card';
+import FilteredTodos from '../containers/FilteredTodos';
+import Footer from '../components/Footer';
 
 export default class App extends Component {
   render () {
     return (
       <div>
         <AppBarIcon></AppBarIcon>
-        <AddCard />
-        <FilteredCards />
+        <Card>
+          <AddTodo />
+          <FilteredTodos />
+          <Footer />
+        </Card>
       </div>
     );
   }
