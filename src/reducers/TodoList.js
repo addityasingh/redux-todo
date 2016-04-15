@@ -46,7 +46,7 @@ const cards = (state = [], action) => {
       ];
     case 'ADD_TODO':
       return state.map((item) => {
-        if (item.cardid === state.currentCard) {
+        if (item.cardid === action.cardid) {
           return {
             ...item,
             todos: todos(undefined, action)
