@@ -42,8 +42,12 @@ const cards = (state = [], action) => {
     case 'ADD_CARD':
       return [
         ...state,
-        { id: action.id, todos: todos(undefined) }
+        { cardid: action.cardid, todos: todos(undefined) }
       ];
+    case 'ADD_TODO':
+      return state.map((item) => {
+        return todos(item.todos, action)
+      });
     default:
       return state;
   }
