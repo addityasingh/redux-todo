@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "dev": "webpack-dev-server --progress --colors"
+    "dev": "webpack-dev-server --progress --colors",
+    "build": "webpack webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "http-server": "^0.9.0",
     "material-ui": "^0.14.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
