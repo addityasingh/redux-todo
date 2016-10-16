@@ -1,20 +1,25 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var ENVIRONMENT = process.env.NODE_ENV || 'production';
+var IS_PROD = ENVIRONMENT === 'production';
+
 module.exports = {
-  devtool: 'eval',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index.js'
-  ],
+  devtool: IS_PROD ? 'cheap-module-source-map' : 'eval',
+  entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    filename: 'bundle.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    IS_PROD ? 
+      new webpack.DefinePlugin({
+        'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+        }
+    }) :
+    null
   ],
   module: {
     loaders: [{
