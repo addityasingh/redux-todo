@@ -3,9 +3,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import addEventListenerWithOptions from 'add-eventlistener-with-options';
 
 import todoReducer from './reducers';
 import App from './components/App';
+
+console.log(addEventListenerWithOptions);
 
 let store = createStore(todoReducer);
 

@@ -23,6 +23,10 @@ acorn@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
+add-eventlistener-with-options@1.5:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/add-eventlistener-with-options/-/add-eventlistener-with-options-1.5.0.tgz#c566c1b77d1b1149293d2cfba3ae868b28a6296d"
+
 align-text@^0.1.1, align-text@^0.1.3:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/align-text/-/align-text-0.1.4.tgz#0cd90a561093f35d0a99256c22b7069433fad117"
@@ -3303,7 +3307,7 @@ webpack-dev-middleware@^1.4.0:
     path-is-absolute "^1.0.0"
     range-parser "^1.0.3"
 
-webpack-dev-server@^1.12.1:
+webpack-dev-server:
   version "1.16.2"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-1.16.2.tgz#8bebc2c4ce1c45a15c72dd769d9ba08db306a793"
   dependencies:

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Create a todo list app using redux, material-ui",
   "scripts": {
-    "start": "node server.js",
+    "start": "webpack-dev-server",
     "lint": "eslint src",
     "dev": "webpack-dev-server --progress --colors",
     "build": "webpack webpack.config.prod.js"
@@ -39,6 +39,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "add-eventlistener-with-options": "^1.6.0",
     "http-server": "^0.9.0",
     "material-ui": "^0.14.4",
     "react": "^0.14.8",

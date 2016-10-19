@@ -5,21 +5,13 @@ var ENVIRONMENT = process.env.NODE_ENV || 'production';
 var IS_PROD = ENVIRONMENT === 'production';
 
 module.exports = {
-  devtool: IS_PROD ? 'cheap-module-source-map' : 'eval',
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    IS_PROD ? 
-      new webpack.DefinePlugin({
-        'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-        }
-    }) :
-    null
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [{
